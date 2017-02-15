@@ -1,12 +1,12 @@
-import { 
-  summerizeSizeCountry, 
-  summerizeMonthCountry, 
-  summerizeManufacturersByGender, 
-  summerizeManufacturersByCountry 
+import {
+  summerizeSizeCountry,
+  summerizeMonthCountry,
+  summerizeManufacturersByGender,
+  summerizeManufacturersByCountry
 } from './transform';
 
 export default {
-  API_PATH: '/sales.csv',
+  API_PATH: 'sales.csv',
   COLOURS: [
     "#5d7f3c",
     "#8f55ce",
@@ -30,19 +30,19 @@ export default {
     "#9b4869"
   ],
   GRAPHS: [
-    { 
+    {
       title: 'Manufacturers By Gender',
       function: summerizeManufacturersByGender
     },
-    { 
+    {
       title: 'Manufacturers By Country',
       function: summerizeManufacturersByCountry
     },
-    { 
+    {
       title: 'Sizes By Country',
       function: summerizeSizeCountry
     },
-    { 
+    {
       title: 'Months By Country',
       function: summerizeMonthCountry
     }
