@@ -1,0 +1,35 @@
+Sales Stats the a Jean company
+
+This UI allows a purchasing a team in a online jean retailer to explore a summary of orders placed by users. It allows them to view graphs of the following: 
+
+- Total Sales by Manufacturer and Gender
+- Total Sales by Manufacturer and Country
+- Total Sales by Size and Country
+- Total Sales by Month and Country
+
+To run do: 
+
+- npm install
+- npm run start
+
+To run the tests run: 
+
+- num run test
+
+Frameworks Used: 
+
+D3 - This is a great library for creating visualizations and made building the graph possible, and also made it easy to fetch the data from the server in any format. 
+Babel - This allows me to use the latest javascript features and syntax but still have the code work in older browsers.
+Mocha / Chai / JSDom - For unit testing I am most familiar with these.
+
+Dataformat: 
+
+For every combination of day, country, manufacturer, gender, colour, size and style for my example data there is a unique row, generating 698887 rows of data to process.
+
+For development I had the browser fetch the full set of data on page load and then this is processed for each graph generated. There is a noticeable lag to process the data as it is a fair amount of work to process so many rows. The most compact way (and therefore preformant) way to represent this data was a CSV file. So I used this in my development environment. 
+
+In production it would be more preformant to have the API server process the data and serve it summarized to the client to draw. In this case JSON could be used to represent the summary and would be quicker to process. 
+
+Assumptions:
+
+I assumed that the requirement was just to create summaries for the predefined queries asked for as opposed for making a generic data explorer where the purchasing team could create arbitrary graphs on whatever fields they wanted. This is easy to extend to add new graphs if those are required.
